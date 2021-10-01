@@ -1,0 +1,2 @@
+C:\C++\FieldOfView\Debug\FieldOfView.exe
+C:\C++\FieldOfView\Debug\FieldOfView.pdb
