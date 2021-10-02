@@ -81,4 +81,14 @@ namespace MathOFVector
 	{
 		return sqrt_opt((v2._x-_x)* (v2._x - _x) + (v2._y - _y) * (v2._y - _y), 0.001);
 	}
+	std::ostream& operator<<(std::ostream& out, const Vector2& v)
+	{
+		out << v._x << " " << v._y;
+		return out;
+	}
+	std::istream& operator>>(std::istream& in, Vector2& v)
+	{
+		in >> v._x >> v._y;
+		return in;
+	}
 }

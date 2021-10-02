@@ -28,6 +28,9 @@ namespace MathOFVector
 		float dot(const Vector2& v2) const;
 		//Vector2 cross(const Vector2& v2) const;//пока не нужна
 
+		friend std::ostream& operator<<(std::ostream& out, const Vector2& v);
+		friend std::istream& operator>>(std::istream& in, Vector2& v);
+
 		float sqrMagnitude() const;
 		float magnitude() const;
 		Vector2 normalize() const;
