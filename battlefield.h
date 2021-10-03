@@ -1,36 +1,37 @@
 #pragma once
 
 #include <map>
+#include <random>
 
-#include "Vector2.h"
 #include "Soldier.h"
+#include "Vector2.h"
 
 using namespace MathOFVector;
 
 namespace FieldOfView
 {
-	typedef std::multimap<float, Soldier> YMap;
-	typedef std::multimap<float, YMap> XMap;
+	typedef std::map<std::pair<float, float>, Soldier > map2d;
 
 	class Battlefield
 	{
 	private:
-		XMap _mapOFUnits;
+		map2d _mapOFUnits;
 		int _sizeX;
 		int _sizeY;
 
-		XMap GeneratedSoldier(int sizeX, int sizeY, int countOfGeneratedSoldier);
+		map2d GeneratedSoldiers(int sizeX, int sizeY, int countOfGeneratedSoldier);
 	public:
 		Battlefield();
 		Battlefield(int sizeX, int sizeY, int countOfGeneratedSoldier);
-		Battlefield(int sizeX, int sizeY, std::map<float, std::multimap<float, Soldier>> mapOFUnits);
+		Battlefield(int sizeX, int sizeY, std::map<std::pair<float, float>, Soldier > mapOFSoldiers);
 
-		static std::map<float, std::multimap<float, Soldier>> getMapOFUnits(const std::vector<Soldier>& vectorOfSoldiers);
-		template <typename Soldier, const size_t n1>
-		static std::map<float, std::multimap<float, Soldier>> getMapOFUnits(const Soldier(&arrayOfSoldiers)[n1]);
+		map2d transformToMapOFSoldiers(const std::vector<Soldier>& vectorOfSoldiers);
+		//template <typename Soldier, const size_t n>
+		//static std::multimap<float, std::multimap<float, FieldOfView::Soldier>> transformToMapOFSoldiers(const Soldier(&arrayOfSoldiers)[n]);
 
-
+		void calculateFieldsOfViewForAllSoldier();
+		
+		friend std::ostream& operator<<(std::ostream& out, Battlefield& battlefield);
+		//friend std::istream& operator>>(std::istream& in, Battlefield& battlefield);
 	};
 }
-
-

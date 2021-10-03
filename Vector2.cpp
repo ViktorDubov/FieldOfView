@@ -17,11 +17,11 @@ namespace MathOFVector
 		_x = x;
 		_y = y;
 	}
-	float Vector2::getX()
+	float Vector2::getX() const
 	{
 		return _x;
 	}
-	float Vector2::getY()
+	float Vector2::getY() const
 	{
 		return _y;
 	}
@@ -53,7 +53,7 @@ namespace MathOFVector
 		v._y = _y / val;
 		return v;
 	}
-	float Vector2::dot(const Vector2& v2) const //const Vector2& v1, 
+	float Vector2::dot(const Vector2& v2) const 
 	{
 		return _x * v2._x + _y * v2._y;
 	}
@@ -80,6 +80,10 @@ namespace MathOFVector
 	float Vector2::distance(const Vector2& v2) const
 	{
 		return sqrt_opt((v2._x-_x)* (v2._x - _x) + (v2._y - _y) * (v2._y - _y), 0.001);
+	}
+	float Vector2::sqrDistance(const Vector2& v2) const
+	{
+		return (v2._x - _x) * (v2._x - _x) + (v2._y - _y) * (v2._y - _y);
 	}
 	std::ostream& operator<<(std::ostream& out, const Vector2& v)
 	{

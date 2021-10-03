@@ -1,7 +1,5 @@
 #pragma once
 
-//#include <cmath>
-
 #include "Mathf.h"
 
 namespace MathOFVector
@@ -15,10 +13,9 @@ namespace MathOFVector
 		Vector2();
 		Vector2(float x, float y);
 
-		//Vector2& getVector2();
 		void setVector2(float x, float y);
-		float getX();
-		float getY();
+		float getX() const;
+		float getY() const;
 
 		Vector2 operator+(const Vector2& v) const;
 		Vector2 operator-(const Vector2& v) const;
@@ -37,6 +34,7 @@ namespace MathOFVector
 		float cosAngle(const Vector2& v2) const;
 		float angle(const Vector2& v2) const;
 		float distance(const Vector2& v2) const;
+		float sqrDistance(const Vector2& v2) const;
 	};
 }
 

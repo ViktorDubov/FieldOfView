@@ -1,3 +1,20 @@
-﻿  Soldier.cpp
+﻿  Battlefield.cpp
 C:\C++\FieldOfView\Mathf.h(7,25): warning C4305: инициализация: усечение из "double" в "float"
+C:\C++\FieldOfView\Battlefield.cpp(9,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\C++\FieldOfView\Battlefield.cpp(11,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\C++\FieldOfView\Battlefield.cpp(12,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\C++\FieldOfView\Battlefield.cpp(13,88): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\C++\FieldOfView\Battlefield.cpp(13,78): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\C++\FieldOfView\Battlefield.cpp(13,143): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\C++\FieldOfView\Battlefield.cpp(13,106): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+  FieldOfView.cpp
+C:\C++\FieldOfView\Mathf.h(7,25): warning C4305: инициализация: усечение из "double" в "float"
+  Soldier.cpp
+C:\C++\FieldOfView\Mathf.h(7,25): warning C4305: инициализация: усечение из "double" в "float"
+  Vector2.cpp
+C:\C++\FieldOfView\Mathf.h(7,25): warning C4305: инициализация: усечение из "double" в "float"
+C:\C++\FieldOfView\Vector2.cpp(66,43): warning C4305: аргумент: усечение из "double" в "float"
+C:\C++\FieldOfView\Vector2.cpp(78,44): warning C4305: аргумент: усечение из "double" в "float"
+C:\C++\FieldOfView\Vector2.cpp(82,80): warning C4305: аргумент: усечение из "double" в "float"
+  Создание кода...
   FieldOfView.vcxproj -> C:\C++\FieldOfView\Debug\FieldOfView.exe
